@@ -2,10 +2,8 @@ from setuptools import setup, find_packages
 import os
 import re
 
-# Read version from __init__.py
-with open(os.path.join('snapdroid', '__init__.py'), 'r') as f:
-    version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", f.read(), re.M)
-    version = version_match.group(1) if version_match else '0.0.0'
+# Hardcoded version for now
+version = '1.0.2'
 
 # Read long description from README.md
 with open('README.md', 'r') as f:
@@ -17,8 +15,7 @@ setup(
     description="Android Screenshot and Screen Recording Tool",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author="Sid Joshi",
-    author_email="your.email@example.com",
+    author="Siddharth Joshi",
     url="https://github.com/dr34mhacks/snapdroid",
     packages=find_packages(),
     entry_points={

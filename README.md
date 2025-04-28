@@ -13,7 +13,7 @@ A powerful command-line tool for capturing Android screenshots and screen record
   / ___/____  ____ _____  / __ \_________  (_)___/ /   Android
   \__ \/ __ \/ __ `/ __ \/ / / / ___/ __ \/ / __  /    Screenshot
  ___/ / / / / /_/ / /_/ / /_/ / /  / /_/ / / /_/ /     & Recording
-/____/_/ /_/\__,_/ .___/_____/_/   \____/_/\__,_/      
+/____/_/ /_/\__,_/ .___/_____/_/   \____/_/\__,_/      Tool v1.0.0
                 /_/                                     
 ```
 
@@ -23,7 +23,6 @@ A powerful command-line tool for capturing Android screenshots and screen record
 - **Screen Recording**: Record device activity for specified durations
 - **App Targeting**: Launch and capture specific apps by package name
 - **Background Blur Testing**: Special mode for security testing of app preview blurring
-- **No Root Required**: Works with standard ADB debugging connection
 - **No Third-Party Apps**: Uses built-in Android tools, no app installation needed
 - **Local Storage**: Files saved directly to your computer, no cloud uploads
 - **Emulator Support**: Works with Android emulators including Corellium devices
@@ -54,7 +53,7 @@ A powerful command-line tool for capturing Android screenshots and screen record
 ### Option 1: Install from PyPI (Recommended)
 
 ```bash
-pip install snapdroid
+pip3 install snapdroid
 ```
 
 ### Option 2: Install from GitHub
@@ -175,4 +174,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📬 Contact
 
-Created by [@yourusername](https://github.com/yourusername) - feel free to contact me!
+Created by [@dr34mhacks](https://github.com/dr34mhacks) - feel free to contact me!
