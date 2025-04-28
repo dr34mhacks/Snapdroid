@@ -16,7 +16,7 @@ ASCII_ART = fr"""
 {COLOR_GREEN}  / ___/____  ____ _____  / __ \_________  (_)___/ /   {COLOR_GREEN}{COLOR_YELLOW}Android{COLOR_RESET}
 {COLOR_GREEN}  \__ \/ __ \/ __ `/ __ \/ / / / ___/ __ \/ / __  /    {COLOR_GREEN}{COLOR_YELLOW}Screenshot{COLOR_RESET}
 {COLOR_GREEN} ___/ / / / / /_/ / /_/ / /_/ / /  / /_/ / / /_/ /     {COLOR_GREEN}{COLOR_YELLOW}& Recording{COLOR_RESET}
-{COLOR_GREEN}/____/_/ /_/\__,_/ .___/_____/_/   \____/_/\__,_/      {COLOR_GREEN}{COLOR_YELLOW}Tool v1.0.2{COLOR_RESET}
+{COLOR_GREEN}/____/_/ /_/\__,_/ .___/_____/_/   \____/_/\__,_/      {COLOR_GREEN}{COLOR_YELLOW}Tool v1.0.3{COLOR_RESET}
 {COLOR_GREEN}                /_/                                     {COLOR_RESET}
 {COLOR_GREEN}                          With <3 by Sid (github.com/dr34mhacks){COLOR_RESET}
 """
@@ -242,7 +242,7 @@ def main():
     
     if args.version:
         # Hardcoded version to match package version
-        __version__ = '1.0.2'
+        __version__ = '1.0.3'
         print(f"{COLOR_GREEN}SnapDroid version: {__version__}{COLOR_RESET}")
         return
     

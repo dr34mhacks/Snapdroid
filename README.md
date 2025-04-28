@@ -13,7 +13,7 @@ A powerful command-line tool for capturing Android screenshots and screen record
   / ___/____  ____ _____  / __ \_________  (_)___/ /   Android
   \__ \/ __ \/ __ `/ __ \/ / / / ___/ __ \/ / __  /    Screenshot
  ___/ / / / / /_/ / /_/ / /_/ / /  / /_/ / / /_/ /     & Recording
-/____/_/ /_/\__,_/ .___/_____/_/   \____/_/\__,_/      Tool v1.0.0
+/____/_/ /_/\__,_/ .___/_____/_/   \____/_/\__,_/      Tool v1.0.3
                 /_/                                     
 ```
 
