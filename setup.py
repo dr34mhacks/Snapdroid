@@ -3,7 +3,7 @@ import os
 import re
 
 # Hardcoded version for now
-version = '1.0.3'
+version = '1.0.4'
 
 # Read long description from README.md
 with open('README.md', 'r') as f:

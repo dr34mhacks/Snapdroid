@@ -16,7 +16,7 @@ ASCII_ART = fr"""
 {COLOR_GREEN}  / ___/____  ____ _____  / __ \_________  (_)___/ /   {COLOR_GREEN}{COLOR_YELLOW}Android{COLOR_RESET}
 {COLOR_GREEN}  \__ \/ __ \/ __ `/ __ \/ / / / ___/ __ \/ / __  /    {COLOR_GREEN}{COLOR_YELLOW}Screenshot{COLOR_RESET}
 {COLOR_GREEN} ___/ / / / / /_/ / /_/ / /_/ / /  / /_/ / / /_/ /     {COLOR_GREEN}{COLOR_YELLOW}& Recording{COLOR_RESET}
-{COLOR_GREEN}/____/_/ /_/\__,_/ .___/_____/_/   \____/_/\__,_/      {COLOR_GREEN}{COLOR_YELLOW}Tool v1.0.3{COLOR_RESET}
+{COLOR_GREEN}/____/_/ /_/\__,_/ .___/_____/_/   \____/_/\__,_/      {COLOR_GREEN}{COLOR_YELLOW}Tool v1.0.4{COLOR_RESET}
 {COLOR_GREEN}                /_/                                     {COLOR_RESET}
 {COLOR_GREEN}                          With <3 by Sid (github.com/dr34mhacks){COLOR_RESET}
 """
@@ -186,11 +186,24 @@ def record_android_screen(duration, output_path, task_switcher=False, package=No
     output_file = os.path.join(output_path, filename)
     try:
         print_formatted_message(f"Screen recording started for {duration} seconds", "Platform: Android")
-        subprocess.check_call(['adb', 'shell', f'screenrecord --time-limit {duration} /sdcard/{filename}'])
-        for i in range(duration - 1, -1, -1):
+        
+        # Start recording in a separate process so we can immediately start the timer
+        recording_process = subprocess.Popen(['adb', 'shell', f'screenrecord --time-limit {duration} /sdcard/{filename}'])
+        
+        # Small delay to ensure recording has started
+        time.sleep(0.5)
+        
+        # Now start the countdown timer
+        print(f"{COLOR_YELLOW}Recording in progress...{COLOR_RESET}")
+        for i in range(duration, 0, -1):
             print(f"{COLOR_YELLOW}Remaining: {i} seconds{COLOR_RESET}", end="\r")
             time.sleep(1)
         print(" " * 30, end="\r")
+        
+        # Wait for recording process to complete
+        recording_process.wait()
+        
+        # Pull the recording from the device
         subprocess.check_call(['adb', 'pull', f'/sdcard/{filename}', output_file])
         subprocess.check_call(['adb', 'shell', f'rm /sdcard/{filename}'])
         message = "Screen recording completed!"
@@ -242,7 +255,7 @@ def main():
     
     if args.version:
         # Hardcoded version to match package version
-        __version__ = '1.0.3'
+        __version__ = '1.0.4'
         print(f"{COLOR_GREEN}SnapDroid version: {__version__}{COLOR_RESET}")
         return
     
