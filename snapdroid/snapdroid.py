@@ -241,7 +241,8 @@ def main():
     print(ASCII_ART)
     
     if args.version:
-        from snapdroid import __version__
+        # Hardcoded version to match package version
+        __version__ = '1.0.2'
         print(f"{COLOR_GREEN}SnapDroid version: {__version__}{COLOR_RESET}")
         return
     
