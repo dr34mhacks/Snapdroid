@@ -104,7 +104,7 @@ options:
 ```bash
 snapdroid -ss
 ```
-<img width="1467" alt="image" src="https://github.com/user-attachments/assets/f80ec9cb-3872-463c-9df6-b3b372e8de05" />
+<img width="1467" alt="snapdroid" src="https://github.com/user-attachments/assets/f80ec9cb-3872-463c-9df6-b3b372e8de05" />
 
 
 **Record the screen for 10 seconds:**
@@ -112,7 +112,7 @@ snapdroid -ss
 snapdroid -sr 10
 ```
 
-<img width="1469" alt="image" src="https://github.com/user-attachments/assets/c610e46e-2a28-4c81-8a89-36dbc3a344f9" />
+<img width="1469" alt="snapdroid" src="https://github.com/user-attachments/assets/c610e46e-2a28-4c81-8a89-36dbc3a344f9" />
 
 
 **Save to a specific directory:**
@@ -132,7 +132,7 @@ snapdroid -ss --package com.example.app
 snapdroid -ss --background
 ```
 
-<img width="1476" alt="image" src="https://github.com/user-attachments/assets/ec834227-1772-4052-8712-35b937f18ee2" />
+<img width="1476" alt="snapdroid" src="https://github.com/user-attachments/assets/ec834227-1772-4052-8712-35b937f18ee2" />
 
 
 **Record a specific app for 5 seconds:**
@@ -144,12 +144,24 @@ snapdroid -sr 5 --package com.example.banking.app
 ```bash
 snapdroid --examples
 ```
-<img width="1126" alt="image" src="https://github.com/user-attachments/assets/1d106f93-755c-44ec-9b9a-e17cc5952a05" />
+<img width="1126" alt="snapdroid" src="https://github.com/user-attachments/assets/1d106f93-755c-44ec-9b9a-e17cc5952a05" />
 
 **Show version information:**
 ```bash
 snapdroid --version
 ```
+
+## Watch SnapDroid in Action:
+
+SnapDroid Video Demonstration:
+
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=1QIj4CdrTPM">
+    <img width="1126" src="https://img.youtube.com/vi/1QIj4CdrTPM/1.jpg" alt="SnapDroid Android Capture">
+  </a>
+</p>
+
 
 ## 🔒 Security Testing Use Cases
 
