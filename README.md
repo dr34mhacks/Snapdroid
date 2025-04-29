@@ -1,21 +1,19 @@
-# SnapDroid
+<div align=center>
+<img src="https://github.com/user-attachments/assets/cee729da-42ca-4169-bf04-4757cb79bdc4">
+
+</div>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-Android-brightgreen" alt="Platform: Android">
-  <img src="https://img.shields.io/badge/License-MIT-blue" alt="License: MIT">
-  <img src="https://img.shields.io/badge/Version-1.0.0-orange" alt="Version: 1.0.0">
+  <img src="https://img.shields.io/badge/License-MIT-yellow" alt="License: MIT">
+  <img src="https://img.shields.io/pypi/v/snapdroid.svg">
+  <img src="https://img.shields.io/badge/screen-capture-orange" alt="screen record android">
 </p>
 
-A powerful command-line tool for capturing Android screenshots and screen recordings directly to your local machine without third-party apps or manual transfers.
+- - - 
 
-```
-   _____                   ____             _     __   
-  / ___/____  ____ _____  / __ \_________  (_)___/ /   Android
-  \__ \/ __ \/ __ `/ __ \/ / / / ___/ __ \/ / __  /    Screenshot
- ___/ / / / / /_/ / /_/ / /_/ / /  / /_/ / / /_/ /     & Recording
-/____/_/ /_/\__,_/ .___/_____/_/   \____/_/\__,_/      Tool v1.0.3
-                /_/                                     
-```
+
+A powerful command-line tool for capturing Android screenshots and screen recordings directly to your local machine without third-party apps or manual transfers. 
 
 ## 🚀 Features
 
@@ -36,15 +34,15 @@ A powerful command-line tool for capturing Android screenshots and screen record
 - **Demo Creation**: Record app demos directly from your development environment
 
 ### For Security Testers
+- **Automation Friendly**: Integrate into testing scripts easily 
 - **Background Blur Testing**: Test if sensitive apps properly blur content in the app switcher view
-- **Evidence Collection**: Capture proof of security findings
-- **Automation Friendly**: Integrate into testing scripts
-- **Works on Emulators**: Test on platforms where manual screenshots are difficult (like Corellium)
+- **POC Collection**: Capture proof of security findings actual pain point of mine for creating this tool
+- **Works on Emulators**: Test on platforms where manual screenshots are difficult (like `Corellium`)
 
 ## 📋 Requirements
 
 - Python 3.6+
-- Android Debug Bridge (ADB) installed and in your PATH
+- Android Debug Bridge (ADB) installed and set to your PATH
 - USB debugging enabled on your Android device
 - Connected Android device or emulator
 
@@ -86,15 +84,36 @@ Connect your Android device and enable USB debugging
 
 ### Basic Commands
 
+```
+SnapDroid - Android Screenshot and Screen Recording Tool
+
+options:
+  -h, --help            show this help message and exit
+  --screenshot, -ss     Capture a screenshot
+  --screenrecord, -sr SCREENRECORD
+                        Record the screen for specified seconds
+  --out OUT             Output directory for saved files (default: current directory)
+  --background          Navigate to app switcher before capturing (pentest app preview blur test)
+  --package PACKAGE     Specify the target app package name (optional override for foreground app detection)
+  --delay DELAY         Delay in seconds after navigating to app switcher (default: 1)
+  --examples            Show usage examples
+  --version             Show version information
+```
+
 **Take a screenshot:**
 ```bash
 snapdroid -ss
 ```
+<img width="1467" alt="image" src="https://github.com/user-attachments/assets/f80ec9cb-3872-463c-9df6-b3b372e8de05" />
+
 
 **Record the screen for 10 seconds:**
 ```bash
 snapdroid -sr 10
 ```
+
+<img width="1469" alt="image" src="https://github.com/user-attachments/assets/c610e46e-2a28-4c81-8a89-36dbc3a344f9" />
+
 
 **Save to a specific directory:**
 ```bash
@@ -113,6 +132,9 @@ snapdroid -ss --package com.example.app
 snapdroid -ss --background
 ```
 
+<img width="1476" alt="image" src="https://github.com/user-attachments/assets/ec834227-1772-4052-8712-35b937f18ee2" />
+
+
 **Record a specific app for 5 seconds:**
 ```bash
 snapdroid -sr 5 --package com.example.banking.app
@@ -122,6 +144,7 @@ snapdroid -sr 5 --package com.example.banking.app
 ```bash
 snapdroid --examples
 ```
+<img width="1126" alt="image" src="https://github.com/user-attachments/assets/1d106f93-755c-44ec-9b9a-e17cc5952a05" />
 
 **Show version information:**
 ```bash
